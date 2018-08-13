@@ -7,7 +7,7 @@ module.exports = function (req, res, next) {
     }
     res.error = function (error) {
         res.json({
-            code: 0,
+            code: 1,
             error
         });
     }
