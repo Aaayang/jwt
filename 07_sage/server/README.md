@@ -60,23 +60,3 @@ HMAC 算法就是 hash 算法 + 盐 的结合
 
 
 jwt.io 网站可以解密 jwtToken
-
-权限验证中间件
-
-## 前端
-
-```
-create-react-app frontend
-// 实现路由和 redux 的配合
-cnpm install react-router-redux@next history -S
-```
-
-## 交互
-
-Saga 操作异步请求
-
-```
-重启后台服务和 mongodb ！！！
-```
-
-
