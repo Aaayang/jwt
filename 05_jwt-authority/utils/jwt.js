@@ -19,10 +19,12 @@ let verify = (mustAdmin) => (req,res,next) => {
             if(err) {
                 if (err.name == 'TokenExpiredError') {
                     // 验证成功但过期了
-                    res.error('token 已经过期');
+                    res.status(401).error('token 已经过期');
                 } else {
                     // token 验证失败
-                    res.error('token 是无效的');
+                    // 401 无权访问
+                    // 403 禁止访问
+                    res.status(401).error('token 是无效的');
                 }
             } else {
                 if(mustAdmin) {
